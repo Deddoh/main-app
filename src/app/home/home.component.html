@@ -1,0 +1,178 @@
+<!-- Landing page -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navis | Welcome</title>
+  <!-- <link rel="preload" href="/assets/images/par.jpg" as="image">  -->
+  <script type="text/javascript" src="Js/jquery-3.3.1.min.js"></script>
+   <!-- <link rel="stylesheet" href="Css/floating-wpp.css"> -->
+    <script type="text/javascript" src="Js/floating-wpp.js"></script>
+    <script>
+      $(function(){
+        $(document).scroll(function(){
+          var $navscroll = $('.header-buttons');
+          $navscroll.toggleClass('scrolled', $(this).scrollTop() > $navscroll.height());
+        });
+      });
+
+
+    </script>
+  <!-- font style -->
+  <!-- <link rel="stylesheet" type="text/css" href="font-muller/fonts.css"> -->
+  
+  <script type="text/javascript" src="Js/main.js"></script>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Finacing working capital for small businesses">
+  <meta name="keywords" content="">
+  <meta name="author" content="Dedan Njoroge Watiri">
+</head>
+<body>
+
+
+<header>
+  <section id="showcase">
+
+    <div class="header-buttons">
+    
+    <div id="logo-brand">
+        <h1><a [routerLink] = "['/home']"> Navis </a></h1>
+      </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#register">early access</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+
+    
+
+    </div>
+    <div class="tag">
+      <h1>AI-driven <span class="highlight"> working capital finance</span> for small businesses</h1>
+      <p>Sign up for early access</p>
+      <p><button mat-raised-button class="btn btn-default" color="primary" [routerLink] = "['/register']" > Sign up</button></p>
+      
+</div>
+    
+  </section>
+
+  </header>
+
+<main >
+
+  <section id="newsletter" class="sec">
+    <h1>Subscribe to our newsletter</h1>
+    <form id="subscription_form">
+      <input type="email" name="email" placeholder="Enter email..." pattern=".+@.+\..+">
+      <button type="submit" class="subscribe_button "><h4>Subscribe to our mailing list</h4></button>
+    </form>
+    
+  </section> 
+
+  <section id="contact" class="sec">
+
+    <h1 class="heading">Contact us</h1>
+      <div id="contact-info">
+        <div id="address">
+          <p>Physical Location</p>
+          <p>Nas Apartments, Suite 7</p>
+          <p>Nass Drive, Off Jakaya Kikwete Road</p>
+          <p>Milimani, Nairobi</p>
+         </div>
+      <div id="contacts">
+          <p>Let's get in touch:</p>
+            <p>Tel: <a href="tel:+254-20-5210461">+254-20-5210461</a> ,  <a href="tel:+1 857 316 6942"> +1 857 316 6942</a></p>
+            <p>Email: <a href="mailto:info@afyakit.com">info@afyakit.com</a> </p>
+      </div>
+    </div>
+    
+  </section> 
+
+</main> 
+  
+<!-- ################## FOOTER SECTION ##################-->
+  <footer>
+    <div >
+      <p> Navis &nbsp; &nbsp; &nbsp; Copyright &copy; &nbsp; &nbsp; &nbsp; 2020</p>
+
+    </div>
+    <div class="scroll-to-top">
+      <a href="#top">Top </a>
+    </div>
+    
+  </footer>
+  
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC_bBlnZT4qy1QonXpZTTyrnbSo3aiagFU",
+    authDomain: "navis-4b50f.firebaseapp.com",
+    databaseURL: "https://navis-4b50f.firebaseio.com",
+    projectId: "navis-4b50f",
+    storageBucket: "navis-4b50f.appspot.com",
+    messagingSenderId: "385737457607",
+    appId: "1:385737457607:web:52d4b06d187a248019a3e2",
+    measurementId: "G-2X3GW0X7PV"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="Js/db.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <!-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> -->
+
+<script
+  src="https://code.jquery.com/ui/1.8.24/jquery-ui.min.js"
+  integrity="sha256-UOoxwEUqhp5BSFFwqzyo2Qp4JLmYYPTHB8l+1yhZij8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="Js/scrollable.js"></script>
+  <!-- <script type="text/javascript" src="Js/multiStep.js"></script> -->
+  <script type="text/javascript" src="Js/main.js"></script>
+<div class="myButton"></div>
+
+
+</body>
+  <!-- whatsapp button -->
+<script type="text/javascript">
+    $(function () {
+        $('.myButton').floatingWhatsApp({
+            phone: '18573166942',
+            popupMessage: 'Hello, would you like to grow your business? Tell us how can we help you?',
+            message: "I'd like to learn more on what you deliver",
+            showPopup: true,
+            showOnIE: true,
+            headerTitle: '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Welcome To Navis ',
+            headerColor: 'green',
+            backgroundColor: '#fff',
+            buttonImage: '<img src="Images/whatsapp.svg" />',
+            autoOpenTimeout: '0',
+            position: 'right'
+        });
+    });
+</script>
+<!-- register page redirect -->
+<script>
+document.getElementById('navbarRegister').addEventListener('click', (e) =>{
+e.preventDefault();
+window.location.href = 'up.html';
+});
+</script>
+</html>

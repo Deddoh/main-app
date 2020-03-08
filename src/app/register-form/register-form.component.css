@@ -1,0 +1,91 @@
+/* ################### global ################### */
+.essential{
+  color: rgb(197, 143, 7);
+}
+.pagenavdiv{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+ng-template{
+  background: rgb(132, 243, 132);
+}
+  form{
+    min-width: 150px;
+    max-width: 500px;
+    width:60vw;
+    background: antiquewhite;
+    border: 1px solid black;
+    /* box-sizing: border-box; */
+    /* box-shadow: 0 0 0 15px(0 0 0.4 0); */
+    border-radius: 20px;
+    font-size: 16px;
+    color: blue;
+    margin: 20px auto 0 auto;
+    justify-content: center;
+    padding-top: 30px;
+    
+  }
+  form .full-width{
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+ 
+  .pagenavbuttons{
+    padding: 10px 40px;
+    font-size: 18px;
+    margin: 0 20px;
+  }
+
+
+/* ############# end of global ################# */
+
+.example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+#initialPage{
+  padding: 10px 40px;
+  font-size: 18px;
+}
+.initial-page{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+
+
+  .radio-group{
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .radio-group mat-radio-button{
+    margin-bottom: 8px;
+  }
+
+  .checkbox{
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .checkbox mat-checkbox{
+    margin-bottom: 8px;
+  }
+  form h2{
+    padding-left: 5px;
+    font-size: 18px;
+
+  }

@@ -1,0 +1,59 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer{
+    width: 250px;
+}
+
+mat-drawer-container{
+    height: 100%;
+}
+mat-drawer-content{
+    padding: 20px;
+}
+
+ul li{
+    list-style: none;
+}
+
+/* display area */
+
+/* display buttons */
+.main_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main_buttons button{
+    flex:1;
+    margin:0 10px;
+    padding: 4px 0;
+}
+/* end of main buttons */
+/* charts */
+.visualization-charts .charts{
+flex: 1;
+/* height: 350px; */
+
+}
+.visualization-charts .pies{
+justify-content: center;
+}
+
+
+
+
+#a{
+    background: blue;
+} 
+#b{
+    background: green;
+}
+#c{
+    background: khaki;
+}
+

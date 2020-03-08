@@ -1,0 +1,42 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+        <h2>Madison.Inc</h2>
+        <h4>madison@gmail.com</h4>
+        </div>
+    <img src="../../assets/images/nature/1.jpg" alt="Profile Image">
+    </div>
+
+<mat-divider></mat-divider>
+<mat-divider></mat-divider>
+<h2 matSubheader>Pages</h2>
+
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/">Home</a>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/">Invoices</a>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/">Clients</a>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/">Financed Invoices</a>
+
+<mat-divider></mat-divider>
+
+<h2 matSubheader>Tools</h2>
+<a mat-list-item routerLinkActive = "list-item-active" [routerLink]="['/customer-details']">
+    <mat-icon>payment</mat-icon>
+    Payment
+    </a>
+    <a mat-list-item routerLinkActive = "list-item-active" [routerLink]="['/customer-details']">
+        <mat-icon>backup</mat-icon>
+        Upload Invoice Data
+        </a>
+    <a mat-list-item routerLinkActive = "list-item-active" [routerLink]="['/customer-details']">
+        <mat-icon>cloud_download</mat-icon>
+        Download File
+        </a>
+
+<a mat-list-item routerLinkActive = "list-item-active" routerLink="/">
+<mat-icon>phone</mat-icon>
+Call
+</a>
+
+
+</mat-nav-list>
+

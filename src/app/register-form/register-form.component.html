@@ -1,0 +1,248 @@
+<mat-horizontal-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <br>
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Basic Details</ng-template>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Company Name</mat-label>
+          <input matInput placeholder="Enter company name" formControlName="company_name" required> 
+        </mat-form-field><br>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Enter email" formControlName="email" required>
+          
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Phone</mat-label>
+          <span matPrefix>+254 &nbsp;</span>
+          <input type="tel" matInput placeholder="700-000-000" formControlName="phone" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Sector</mat-label>
+          <mat-select formControlName="sector" >
+                      <mat-option value="Agriculture and forestry">Agriculture and forestry</mat-option>
+                      <mat-option value="Mining and quarrying">Mining and quarrying</mat-option>
+                       <mat-option value= "Manufacturing">Manufacturing</mat-option>
+                       <mat-option value= "Energy"> Energy</mat-option>
+                         <mat-option value= "Utilities">Utilities</mat-option>
+                         <mat-option value="Construction"> Construction </mat-option>
+                          <mat-option value="Wholesale and retail">Wholesale and retail</mat-option>
+                          <mat-option value= "Transport and storage"> Transport and storage</mat-option>
+                          <mat-option value= "Finance and Insurance"> Finance and Insurance</mat-option>
+                          <mat-option value=  "Real estate"> Real estate</mat-option>
+                           <mat-option value="Professional services"> Professional services</mat-option>
+                            <mat-option value= "Administrative and support services"> Administrative and support services</mat-option>
+                             <mat-option value= "Education" > Education</mat-option>
+                               <mat-option value= "Healthcare"> Healthcare</mat-option>
+                                <mat-option value= "Arts and entertainment"> Arts and entertainment</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Monthly Revenue</mat-label>
+          <input matInput type="number" class="example-right-align">
+          <span matPrefix>$&nbsp;&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+        <div class="initial-page">
+          <button mat-raised-button matStepperNext color="primary" id="initialPage">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Physical Location</ng-template>
+        <mat-form-field class="full-width">
+          <mat-label>Location</mat-label>
+          <input type="search" matInput formControlName="location" placeholder="Lexlink, Milimani Rd, Nairobi"
+                 required>
+        </mat-form-field>
+
+        <table class="full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="full-width">
+                <mat-label>City</mat-label>
+                <input type="text" matInput formControlName="city" placeholder="Enter city name">
+                </mat-form-field>
+                </td>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Zip Code</mat-label>
+                  <input matInput #postalCode maxLength="5" formControlName="zip" placeholder="Enter zip/postal code" required>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <div class="pagenavdiv">
+          <button mat-raised-button matStepperPrevious class="pagenavbuttons previous" color="primary">Previous</button>
+          <button mat-raised-button matStepperNext class="pagenavbuttons next" color="primary">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- questions -->
+    <mat-step [stepControl]="EarlyAccessGroup">
+      <form [formGroup]="EarlyAccessGroup">
+      <ng-template matStepLabel>Early Access</ng-template>
+      <h2>How do you <span class="essential">track</span> business expenses?</h2>
+      <!-- <mat-form-field class="full-width"> -->
+        <div class="checkbox">
+      <mat-checkbox  formControlName="excel" labelPosition="after">Excel</mat-checkbox>
+      <mat-checkbox formControlName="written" labelPosition="after">Written records</mat-checkbox>
+      <mat-checkbox formControlName="qb" labelPosition="after">QuickBooks</mat-checkbox>
+      <mat-checkbox formControlName="sage" labelPosition="after">Sage</mat-checkbox>
+      <mat-checkbox formControlName="sap" labelPosition="after">SAP</mat-checkbox>
+      <mat-checkbox formControlName="other" labelPosition="after">Other ERP software</mat-checkbox>
+    </div>
+      <!-- </mat-form-field> -->
+      <br>
+      <br>
+      <h2>Would you like to participate in <span class="essential">early access</span>?</h2>
+      <div>
+      <mat-radio-group class="radio-group" formControlName="value">
+        <mat-radio-button [value]="true" aria-checked="true">Yes</mat-radio-button>
+        <mat-radio-button [value]="false">No</mat-radio-button>
+      </mat-radio-group>
+    </div>
+      <div class="pagenavdiv">
+        <button mat-raised-button matStepperPrevious class="pagenavbuttons previous" color="primary">Previous</button>
+        <button mat-raised-button matStepperNext class="pagenavbuttons next" color="primary">Next</button>
+      </div>
+
+    </form>
+    </mat-step>
+
+    <mat-step [stepControl]="BankDetailsGroup">
+      <form [formGroup]="BankDetailsGroup">
+        <ng-template matStepLabel>Bank Details</ng-template>
+        <mat-form-field class="full-width">
+          <mat-label>Bank Name</mat-label>
+        <mat-select formControlName="banks" required>
+      <mat-option value="VICMKENA">Victoria Commercial Bank Kenya</mat-option>
+			<mat-option value="TNBLKENA">Transnational Bank Kenya</mat-option>
+			<mat-option value="SOCRKENA">Standard Chartered Bank Kenya</mat-option>
+			<mat-option value="PRIEKENX">Prime Bank Kenya</mat-option>
+			<mat-option value="DELFKENA">M Oriental Bank Kenya</mat-option>
+			<mat-option value="PAUTKENA">Paramount Universal Bank Kenya</mat-option>
+			<mat-option value="NINCKENA">NIC Bank Kenya</mat-option>
+			<mat-option value="NBKEKEN">National Bank of Kenya</mat-option>
+			<mat-option value="MIEKKENA">Middle East Bank Kenya</mat-option>
+			<mat-option value="KREPKENA">Sidian Bank Kenya</mat-option>
+			<mat-option value="KCBLKENX">Kenya Commercial Bank KCB</mat-option>
+			<mat-option value="IMBLKENA">I&M Bank Kenya</mat-option>
+			<mat-option value="HBZUKENA">Habib Bank AG Zurich Kenya</mat-option>
+			<mat-option value="GAFRKENA">Gulf African Bank Kenya</mat-option>
+			<mat-option value="GUARKENA">Guardian Bank Kenya</mat-option>
+			<mat-option value="IFCBKENA">First Community Bank Kenya</mat-option>
+			<mat-option value="FBAKKENA">Guaranty Trust GT Bank Kenya</mat-option>
+			<mat-option value="FCBLKENA">SBM Bank Kenya</mat-option>
+			<mat-option value="FABLKENA">Family Bank Kenya</mat-option>
+			<mat-option value="EQBLKENA">Equity Bank Kenya</mat-option>
+			<mat-option value="EQUAKENA">Spire Bank Kenya</mat-option>
+			<mat-option value="ECOCKENA">Ecobank Kenya</mat-option>
+			<mat-option value="ESATKENA">Trade and Development Bank </mat-option>
+			<mat-option value="DTKEKENA">Diamond Trust Bank DTB Kenya</mat-option>
+			<mat-option value="DEVKKENA">Development Bank of Kenya</mat-option>
+			<mat-option value="CRBTKENA">Credit Bank Kenya</mat-option>
+			<mat-option value="KCOOKENA">Cooperative Bank of Kenya</mat-option>
+			<mat-option value="CONKKENA">Consolidated Bank of Kenya</mat-option>
+			<mat-option value="CBAFKENX">Commercial Bank of Africa CBA</mat-option>
+			<mat-option value="CIFIKENA">Jamii Bora Bank</mat-option>
+			<mat-option value="CITIKENA">City Bank Kenya</mat-option>
+			<mat-option value="CKENKENA">Chase Bank Kenya</mat-option>
+			<mat-option value="SBICKENX">CFC Stanbic Bank Kenya</mat-option>
+			<mat-option value="CBKEKENX">Central Bank of Kenya</mat-option>
+			<mat-option value="BARCKENX">Barclays Bank Kenya</mat-option>
+			<mat-option value="BARBKENA">Bank of Baroda</mat-option>
+			<mat-option value="AFRIKENX">Bank of Africa Kenya</mat-option>
+			<mat-option value="ABCLKENA">ABC Bank Kenya</mat-option>
+			<mat-option value="MYBKKENA">Mayfair Bank Kenya</mat-option>
+			<mat-option value="UNAFKENA">United Bank of Africa UBA</mat-option>
+			<mat-option value="BKIDKENA">Bank of India Kenya</mat-option>
+    </mat-select>
+        </mat-form-field>
+
+        <table class="full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="full-width">
+                <mat-label>Account Name</mat-label>
+                <input type="text" matInput formControlName="acc_name" placeholder="Enter bank account name" required>
+                </mat-form-field>
+                </td>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Account Number</mat-label>
+                  <input type="number" matInput #postalCode maxLength="5" formControlName="acc_number" placeholder="Enter bank account number" required>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <mat-form-field class="full-width">
+          <mat-label>KRA Pin</mat-label> 
+          <input type="text" matInput fonrControlName="kra" placeholder="Enter your KRA pin" required>
+        </mat-form-field>
+        <div class="pagenavdiv">
+          <button mat-raised-button matStepperPrevious class="pagenavbuttons previous" color="primary">Previous</button>
+          <button mat-raised-button matStepperSubmit class="pagenavbuttons next" [routerLink]="['/customer']" color="primary">Submit</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <!-- <mat-step [stepControl]="Documents">
+      <form [formGroup]="Documents">
+        <ng-template matStepLabel>Document Upload</ng-template>
+        <table class="full-width" cellspacing="0">
+          <tr>
+            <td>
+              <div class="full-width">
+                <mat-label>Company Registration Certificate</mat-label>
+                <input type="file"  formControlName="company_reg_certificate" required>
+              </div>
+                </td> -->
+                <!-- <td>
+                  <mat-form-field class="full-width">
+                    <mat-label>KRA PIN Certificate</mat-label>
+                    <input type="file"  formControlName="kra_pin_certificate" required>
+                    </mat-form-field>
+                    </td> -->
+                <!-- </tr> -->
+                <!-- <tr>
+                  <td>
+                    <mat-form-field class="full-width">
+                      <mat-label>Tax Compliance Certificate</mat-label>
+                      <input type="file"  formControlName="tax_compliance_certificate" required>
+                      </mat-form-field>
+                      </td>
+                      <td>
+                        <mat-form-field class="full-width">
+                          <mat-label>CR12</mat-label>
+                          <input type="file"  formControlName="cr12" required>
+                          </mat-form-field>
+                          </td>
+                </tr> -->
+                <!-- </table>
+                <div class="pagenavdiv">
+                  <button mat-raised-button matStepperPrevious class="pagenavbuttons previous" color="primary">Previous</button>
+                  <button mat-raised-button matStepperNext class="pagenavbuttons next" color="primary">Submit</button>
+                </div>
+                </form>
+
+     
+    </mat-step> -->
+
+
+    <!-- <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Previous</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step> -->
+  </mat-horizontal-stepper>

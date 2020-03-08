@@ -1,0 +1,123 @@
+<mat-drawer-container>
+    <!-- side bar navigation -->    
+    <mat-drawer mode="side" opened>
+        
+
+        <mat-nav-list>
+            <div class="profile-card">
+                <div class="header">
+                <h2>Madison.Inc</h2>
+                <h4>madison@gmail.com</h4>
+                </div>
+            <img src="../../assets/images/nature/1.jpg" alt="Profile Image">
+            </div>
+        
+        <mat-divider></mat-divider>
+        <mat-divider></mat-divider>
+        <h2 matSubheader>Pages</h2>
+        
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+            <mat-icon>home</mat-icon>
+            Home</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+            <i class="fa fa-hand-holding-usd"></i>
+            Invoices</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+            <mat-icon>people</mat-icon>
+            Clients</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+            <mat-icon></mat-icon>
+            Financed Invoices</a>
+        
+        <mat-divider></mat-divider>
+        
+        <h2 matSubheader>Tools</h2>
+        
+
+            <a mat-list-item routerLinkActive = "list-item-active" routerLink="/">
+                <mat-icon>print</mat-icon>
+               Print
+                </a>
+
+                <a mat-list-item routerLinkActive = "list-item-active" routerLink="/">
+                    <mat-icon>backup</mat-icon>
+                   Upload Invoice Data
+                    </a>
+                <a mat-list-item routerLinkActive = "list-item-active" routerLink="/">
+                    <mat-icon>cloud_download</mat-icon>
+                   Download File
+                    </a>
+
+        <a mat-list-item routerLinkActive = "list-item-active" routerLink="/">
+        <mat-icon>phone</mat-icon>
+        Call
+        </a>
+        <a mat-list-item routerLinkActive = "list-item-active" routerLink="/">
+            <mat-icon>feedback</mat-icon>
+            Feedback
+            </a>
+        
+        </mat-nav-list>
+        
+
+
+
+
+    </mat-drawer>
+
+    <mat-drawer-content>
+
+<section class="header-card" fxLayout="row" >
+    <mat-card fxFlex=100 fxLayoutAlign="space-between">
+        <span>Hi, Madison.Inc</span>
+        
+        <a>
+            <mat-icon>home</mat-icon>
+        </a>
+    
+    </mat-card>
+</section>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+<section fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="numeric">
+    <mat-card fxFlex=25><app-invoice-card label="Total Invoices" total="20"></app-invoice-card></mat-card>
+    <mat-card fxFlex=25><app-clients-card label="Clients Served" total="40k"></app-clients-card></mat-card>
+    <mat-card fxFlex=25><app-finance-card label="Financed Invoices" total="15"></app-finance-card></mat-card>
+    
+    </section>
+<br>
+<mat-divider></mat-divider>
+
+<br>
+<section>
+<div fxFlex="100">
+    <div class="example-container mat-elevation-z8">
+        <table mat-table [dataSource]="datasource">
+      
+          <ng-container matColumnDef="label" sticky="true">
+            <td mat-cell *matCellDef="let row">{{ row.label }}</td>
+          </ng-container>
+      
+          <ng-container [matColumnDef]="'column' + i" *ngFor="let column of data; let i = index">
+            <td mat-cell *matCellDef="let row"> {{ row['column' + i] }} </td>
+          </ng-container>
+      
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+</div>
+</section>
+
+<br><br>
+
+
+<section>
+    <div fxFlex="100">
+        <app-bank-template></app-bank-template>
+    </div>
+</section>
+    </mat-drawer-content>
+
+    </mat-drawer-container>

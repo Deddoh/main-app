@@ -1,0 +1,21 @@
+.text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.total{
+    font-size:60px;
+    margin-bottom: 0;
+    padding-right: 20px;
+}
+
+.mat-icon{
+font-size: 5em;
+
+}
+
+h4{
+    margin-bottom: 0;
+}

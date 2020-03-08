@@ -1,0 +1,1096 @@
+/*global*/
+
+/*floating whatsapp*/
+
+/*general*/
+.floating-wpp {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    font-size: 14px;
+    transition: bottom 0.2s;
+}
+
+.floating-wpp .floating-wpp-button {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px rgba(60, 60, 60, 0.4);
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.floating-wpp .floating-wpp-button img,
+.floating-wpp .floating-wpp-button svg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border-radius: 50%;
+}
+
+.floating-wpp:hover {
+    bottom: 17px;
+}
+
+.floating-wpp:hover .floating-wpp-button {
+    box-shadow: 1px 2px 8px rgba(60, 60, 60, 0.4);
+}
+
+.floating-wpp .floating-wpp-popup {
+    /*border: 2px solid white;*/
+    border-radius: 6px;
+    background-color: #E5DDD5;
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 1px 2px 8px rgba(60, 60, 60, 0.25);
+    width: 0px;
+    height: 0px;
+    bottom: 0;
+    opacity: 0;
+    transition: bottom 0.1s ease-out, opacity 0.2s ease-out;
+    transform-origin: bottom;
+}
+
+.floating-wpp .floating-wpp-popup.active {
+    padding: 0 12px 12px 12px;
+    width: 260px;
+    height: auto;
+    bottom: 82px;
+    opacity: 1;
+}
+
+.floating-wpp .floating-wpp-popup .floating-wpp-message {
+    background-color: white;
+    color: #000;
+    padding: 8px;
+    border-radius: 0px 5px 5px 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.floating-wpp .floating-wpp-popup.active .floating-wpp-message {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+/*head*/
+.floating-wpp .floating-wpp-popup .floating-wpp-head {
+    text-align: right;
+    color: white;
+    margin: 0 -15px 10px -15px;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.floating-wpp .floating-wpp-input-message {
+    background-color: white;
+    margin: 10px -15px -15px -15px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.floating-wpp .floating-wpp-input-message textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 8px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    resize: none;
+}
+
+.floating-wpp .floating-wpp-btn-send {
+    margin-left: 12px;
+    font-size: 0;
+    cursor: pointer;
+}
+
+
+
+/* ########## end of floating whatsapp*/
+
+*{
+	margin:0;
+	padding: 0;
+	
+}
+
+
+.container{
+	width:85%;
+	/*move the page to the middle*/
+	margin: auto;
+	overflow: hidden;
+
+}
+
+.highlight{
+	color: orange;
+}
+
+.text-blue{
+	color: #030580;
+
+}
+.common_button{
+	background:#030580;
+	color: #ffffff;
+	font-weight: thin;
+	padding: 15px 120px;
+	border: none;
+	border-radius: 40px;
+	font-size: 26px;
+	
+}
+
+.logo{
+	height:16px;
+}
+.essential{
+	color: red;
+	font-weight: bold;
+}
+
+
+
+
+html, body{
+	font-size: 16px;
+	font-weight: medium;
+	color: #292A80;
+	line-height: 1.6;
+	margin:0;
+	background: #fff;
+
+}
+
+/*SMALL / MEDIUM SCREEN*/
+@media only screen and (max-width: 768px){
+	header{
+		display: table;
+	}
+	header .header-buttons{
+	display: block; 
+	text-align: center;
+	background: #fff;
+
+
+}
+
+
+/*nav*/
+/*header links*/
+
+.header-buttons .navbar{
+	padding: 0;
+	font-size: 22px;
+	text-align: center;
+	margin:0 auto;
+	font-weight: 300;
+	}
+
+.header-buttons ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 0 40px;
+	width: fit-content;
+}
+
+.header-buttons a{
+	text-decoration: none;
+	color: #030580;
+}
+.header-buttons a:hover{
+	color: orange;
+}
+
+
+/*company logo*/
+#logo-brand{
+	text-align: center;
+	margin:0 auto;
+}
+#logo-brand h1{
+	font-size: 40px;
+	}
+ #navHeader{
+	background: #fff;
+	position: absolute;
+	width: 100%;
+	/*text-align: center;
+	margin:0 auto;
+	justify-content: center;*/
+
+}
+
+/*header scroll*/
+/*.header-buttons.scrolled{
+	background-color: #fff !important;
+	transition: background-color 100ms ease-in-out;
+}*/
+/*end of header styling*/
+
+
+/*tab area*/
+#showcase .tag{
+	/*display: flex-block;
+	align-items: center;
+	text-align: center;*/
+	display: table-cell;
+	vertical-align: middle;
+}
+/*sign up button*/
+.tag #navbarRegister{
+	padding: 12px 42px;
+	border: 0;
+	color: #fff;
+	border-radius: 20px;
+	background: #000000;
+	text-decoration: none;
+	/*margin-top: 20px;*/
+	text-align: center;
+}
+.tag #navbarRegister:hover{
+	padding: 15px 47px;
+	color: #e8491d;
+	border-radius: 20px;
+	background: #fff;
+	text-decoration: none;
+	border:1px solid blue;
+}
+.tag h1{
+	
+	font-weight:medium;
+	font-size:60px;
+	color: #030580;
+	padding: 40px 0 20px 0;
+	text-shadow: 2px 2px 8px #030580;
+	text-align: center;
+	line-height: 70px;
+}
+.tag p{
+
+	text-align: center;
+	font-size: 28px;
+	color: #030580;
+	padding-bottom: 30px;
+
+}
+
+/*end of tag area*/
+
+
+/*header showcase banner*/
+
+ header #showcase {
+	background-image: url('../../assets/images/par.jpg') ;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100%;
+	
+}
+/*end of showcase area*/
+/*subscription area*/
+#newsletter{
+	display: block;
+	padding:10px 10px;
+	color: #fff;
+	background: orange;
+	height:fit-content;
+	line-height: 40px;
+
+}
+
+#newsletter h1{
+text-align: center;
+}
+#newsletter form{
+	text-align: center;
+	margin: 0 auto;
+}
+
+#newsletter input[type="email"]{
+	padding: 4px;
+	height: 25px;
+	width: calc(100% - 100px);
+}
+
+.subscribe_button{
+	height: 35px;
+	background: #000;
+	border: 0;
+	border-radius: 4px;
+	font-family:'Muller Narrow Medium';
+	text-align: center;
+	color: #ffffff;
+	padding: 4px;
+	margin-top: 10px;
+	font-size: 20px;
+	width: calc(100% - 100px);
+}
+
+/*end of subscription area*/
+
+
+section #register{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background: #f1f1f1;
+}
+
+
+
+
+
+/*registration form*/
+
+
+#registration-form{
+	display: flex;
+	flex: 1 1 auto;
+	width: 90vw;
+	height: fit-content;
+	margin:60px auto 10px auto;
+	position: relative;
+
+}
+
+
+
+#registration-form fieldset{
+	width: 80%;
+	flex: 1 1 auto;
+	margin:0 auto;
+	padding:20px 30px;
+	background: #ffffff;
+	border:0;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	position: relative;
+	margin-top: 30px;
+}
+
+ #preferences .cbox, .rbox{
+	color: #030580;
+	padding-bottom: 30px;
+}
+
+#preferences h2{
+	font-size: 28px;
+}
+
+#select_options .cbox input[type="checkbox"] {
+vertical-align: middle;
+width: auto;
+margin-right: 15px;
+
+}
+
+ #select_options .rbox input[type="radio"]{
+ 	width: auto;
+ 	margin-right: 15px;
+ 	vertical-align: middle;
+ 	padding-top: 30px;
+
+	
+}
+
+#registration-form fieldset:nth-child(n){
+	min-height: calc(100vh - 100px);
+	/*height: fit-content;*/
+}
+
+
+
+#registration-form fieldset:not(:first-of-type){
+	display: none;
+	
+}
+/*form buttons*/
+#registration-form .action-button{
+	width: 100px;
+	height: 40px;
+	background: #27AE60;
+	font-weight: bold;
+	color: #fff;
+	border:0;
+	text-align: center;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 15px 8px;
+	transition: all .2s;
+	justify-content: flex-end;
+}
+
+#registration-form .action-button:hover{
+	transform: scale(1.15);
+}
+
+/* form navigation buttons*/
+.next{
+
+	text-align: center;
+	margin-left: 40%;
+		padding-bottom: 3px;
+
+	}
+/*third panel*/
+#preferences #nextButton{
+	float: right;
+}
+
+.submit{
+	
+	float: right;
+
+}
+/* .previous{
+	
+} */
+
+#register{
+	/*display: flex;
+	flex-direction: column;
+	align-items: center;*/
+	background: #f1f1f1;
+	/*height: 100%;*/
+}
+
+#register legend{
+	color: #030580;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 24px;
+
+}
+#register label, h2{
+	color: #030580;
+}
+
+#register input{
+	width: 95%;
+	padding: 4px;
+	height: 24px;
+
+}
+
+#register select{
+	width: 95%;
+	height: 24px;
+	padding: 4px;
+}
+
+
+/*physical location*/
+#location{
+	display:flex;
+	width:100%;
+	justify-content: column;
+	padding-top: 15px;
+	flex-flow:row wrap;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+/*location input fields*/
+.autoPopulateFields  {
+width: 90%;
+margin: 0 auto;
+}
+
+
+
+/*bank details*/
+#bank{
+	display: flex;
+	flex-direction: column;
+}
+/*bank*/
+#bank #bank_details{
+	display: flex;
+	flex-direction: column;
+	justify-content: column;
+	align-items: flex-start;
+	flex-flow:row wrap;
+	width: 100%;
+}
+
+#bank #bank_details input{
+	width: 90%;
+	
+}
+#bank #bank_details .bankacc_name{
+	flex: 1;
+}
+
+
+/*Doc upload*/
+#bank #fileUpload{
+	display:flex;
+	flex-direction: row;
+	flex: 1 0 250px;
+	justify-content: space-between;
+	align-items: center;
+	color: #030580;
+	padding: 30px 0;
+	margin:0 auto;
+}
+
+
+#fileUpload p, input[type="file"]{
+	padding-bottom: 6px;
+}
+
+ /*#bank input[name="file_upload"]{
+	vertical-align: middle;
+	width: auto;
+	margin-right: 15px;
+	padding-bottom: 6px;
+}
+*/
+#fileUpload .fileType{
+	flex: 1;
+}
+#fileUpload .fileButton{
+	flex: 1;
+}
+/*end of doc upload*/
+/*end registration form*/
+
+
+/*Contact us*/
+ #contact{
+ 	
+ 	color: #292A80;
+	background:  #fff;
+	overflow:hidden;
+	height: fit-content;
+	
+}
+
+ #contact .heading{
+	font-size: 24px;
+	text-align: center;
+}
+
+#contact #contact-info{
+	display: flex;
+	font-size: 24px;
+	flex-direction: row;
+	justify-content: space-around;
+	padding:30px;
+	width: 85%;
+	overflow: hidden;
+}
+#contact #address{
+	
+	padding-right: 20px;
+	border-right: 2px solid #000;
+}
+ #contacts{
+	padding-left: 20px;
+	border-right: none;
+}
+#contacts a{
+	text-decoration: none;
+	color:#292A80;
+}
+
+
+
+/*footer*/
+footer {
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+color: #fff;
+background: #292A80;
+height: 60px;
+}
+
+footer p{
+	font-size: 25px;
+	font-weight: bold;
+
+}
+footer .scroll-to-top a{
+text-decoration: none;
+color: #fff;
+}
+	
+}
+
+/*############### END OF MEDIUM SCREEN ################*/
+
+
+
+/*##################### Desktop size screen #######################*/
+@media only screen and (min-width: 768px){
+
+
+/*header*/
+
+header .header-buttons{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+	
+	/*justify-content: space-between;*/
+	min-height: 45px;
+	font-weight: medium;
+	/*font-weight: normal;*/
+	font-size: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+
+/*nav*/
+/*header links*/
+
+.header-buttons .navbar{
+
+	/*width: 100%;*/
+	/*padding:0 0 0 30px;*/
+	padding: 0;
+	font-size: 22px;
+	text-align: center;
+	flex: 1;
+	}
+
+.header-buttons ul{
+		float: right;
+}
+
+
+.header-buttons ul li{
+	list-style: none;
+	/* float: left; */
+	display: inline;
+	padding: 0 10px;
+
+	/*margin-top: 10px;*/
+
+}
+
+.header-buttons a{
+	text-decoration: none;
+	color: #030580;
+}
+.header-buttons a:hover{
+	color: orange;
+}
+
+
+/*company logo*/
+#logo-brand{
+	text-align: center;
+	flex: 3;
+
+}
+#logo-brand h1{
+	/*margin-right: 40px;*/
+
+	font-size: 40px;
+	padding-left: 15% ;
+	}
+ #navHeader{
+	background: #fff;
+	position: absolute;
+	width: 100%;
+}
+/*header scroll*/
+
+.header-buttons.scrolled{
+	background-color: #fff !important;
+	transition: background-color 100ms ease-in-out;
+}
+
+
+
+
+/*tab area*/
+ .tag{
+	display: flex-block;
+	padding-top:16%;
+	text-align: center;
+	align-items: center;
+	margin: 0 auto;
+
+	
+}
+.tag #navbarRegister{
+	padding: 12px 42px;
+	border: 0;
+	color: #fff;
+	border-radius: 20px;
+	background: #000000;
+	text-decoration: none;
+	margin-top: 20px;
+}
+.tag #navbarRegister:hover{
+	padding: 15px 47px;
+	color: #e8491d;
+	border-radius: 20px;
+	background: #fff;
+	text-decoration: none;
+	border:1px solid blue;
+}
+.tag h1{
+	font-weight:medium;
+	font-size:60px;
+	color: #030580;
+	padding-bottom: 20px;
+	text-shadow: 2px 2px 8px #030580;
+}
+.tag p{
+	/*font-weight: medium;*/
+	font-size: 28px;
+	color: #030580;
+	padding-bottom: 30px;
+
+}
+
+/*header showcase*/
+
+header #showcase{
+	background: url('../../assets/images/par.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	
+}
+
+/*section area*/
+/*general*/
+section #about-us{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	
+}
+section #register{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	
+}
+
+
+/*registration form*/
+
+
+#registration-form{
+	display: flex;
+	flex: 1 1 auto;
+	width: 50vw;
+	height: 100%;
+	margin:60px auto 10px auto;
+	position: relative;
+
+}
+
+#registration-form fieldset{
+	width: 80%;
+	flex: 1 1 auto;
+	margin:0 auto;
+	padding:20px 30px;
+	background: #ffffff;
+	border:0;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	position: relative;
+}
+
+ #preferences .cbox, .rbox{
+	color: #030580;
+}
+
+#select_options .cbox input[type="checkbox"] {
+vertical-align: middle;
+width: auto;
+margin-right: 15px;
+
+}
+
+ #select_options .rbox input[type="radio"]{
+ 	width: auto;
+ 	margin-right: 15px;
+ 	vertical-align: middle;
+ 	padding-top: 30px;	
+}
+
+#registration-form fieldset:nth-child(n){
+	min-height: calc(100vh - 100px);
+}
+
+#registration-form fieldset:not(:first-of-type){
+	display: none;
+	
+}
+/*form buttons*/
+#registration-form .action-button{
+	width: 100px;
+	height: 40px;
+	background: #27AE60;
+	font-weight: bold;
+	color: #fff;
+	border:0;
+	text-align: center;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 15px 8px;
+	transition: all .2s;
+}
+
+#registration-form .action-button:hover{
+	transform: scale(1.15);
+}
+
+/* form navigation buttons*/
+.next{
+	text-align: center;
+	margin-left: 40%;
+		padding-bottom: 3px;
+
+	}
+/*third panel*/
+#preferences #nextButton{
+	float: right;
+}
+
+.submit{
+
+	float: right;
+
+}
+/* .previous{
+	
+} */
+
+#register{
+	/*display: flex;
+	flex-direction: column;
+	align-items: center;*/
+	background: #f1f1f1;
+	height: 100%;
+}
+
+#register legend{
+	color: #030580;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 24px;
+
+}
+#register label, h2{
+	color: #030580;
+}
+
+#register input{
+	width: 95%;
+	padding: 4px;
+	height: 24px;
+
+}
+
+#register select{
+	width: 95%;
+	height: 24px;
+	padding: 4px;
+}
+
+
+/*physical location*/
+#location{
+	display:flex;
+	width:100%;
+	justify-content: column;
+	padding-top: 15px;
+	flex-flow:row wrap;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+/*location input fields*/
+.autoPopulateFields  {
+width: 90%;
+margin: 0 auto;
+}
+
+
+
+/*bank details*/
+#bank{
+	display: flex;
+	flex-direction: column;
+}
+/*bank*/
+#bank #bank_details{
+	display: flex;
+	flex-direction: column;
+	justify-content: column;
+	align-items: flex-start;
+	flex-flow:row wrap;
+	width: 100%;
+}
+
+#bank #bank_details input{
+	width: 90%;
+	
+}
+#bank #bank_details .bankacc_name{
+	flex: 1;
+}
+
+
+/*Doc upload*/
+#bank #fileUpload{
+	display:flex;
+	flex-direction: row;
+	flex: 1 0 250px;
+	justify-content: space-between;
+	align-items: center;
+	color: #030580;
+	padding: 30px 0;
+	margin:0 auto;
+}
+
+
+#fileUpload p, input[type="file"]{
+	padding-bottom: 6px;
+}
+
+ /*#bank input[name="file_upload"]{
+	vertical-align: middle;
+	width: auto;
+	margin-right: 15px;
+	padding-bottom: 6px;
+}
+*/
+#fileUpload .fileType{
+	flex: 1;
+}
+#fileUpload .fileButton{
+	flex: 1;
+}
+/*end of doc upload*/
+/*end registration form*/
+
+/*subscription area*/
+#newsletter{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding:10px 10px;
+	color: #fff;
+	background: orange;
+	height: 70px;
+}
+
+
+.subscribe{
+	padding: 4px;
+	height: 25px;
+	width: 340px;
+}
+
+.subscribe_button{
+	height: 35px;
+	background: #000;
+	border: 0;
+	
+	/*font-size: 16px;*/
+	text-align: center;
+	color: #ffffff;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+/*Contact us*/
+ #contact{
+ 	
+ 	color: #292A80;
+	background:  #fff;
+	overflow:hidden;
+	min-height: 200px;
+	
+}
+
+ #contact .heading{
+	font-size: 24px;
+	text-align: center;
+}
+
+#contact #contact-info{
+	display: flex;
+	font-size: 24px;
+	flex-direction: row;
+	justify-content: center;
+	padding:30px;
+	overflow: hidden;
+}
+#contact #address{
+	
+	padding-right: 40px;
+	border-right: 2px solid #000;
+}
+ #contacts{
+	padding-left: 40px;
+	border-right: none;
+}
+#contacts a{
+	text-decoration: none;
+	color:#292A80;
+}
+
+
+
+/*footer*/
+footer {
+
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+background: #292A80;
+height: 60px;
+}
+
+footer p{
+	font-size: 25px;
+	font-weight: bold;
+
+}
+footer .scroll-to-top a{
+text-decoration: none;
+color: #fff;
+padding-left: 100px;
+}
+
+}

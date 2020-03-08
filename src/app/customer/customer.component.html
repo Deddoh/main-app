@@ -1,0 +1,52 @@
+<app-headernav (toggleSideBarForMe)="sideBarToggler()"></app-headernav>
+
+
+
+<mat-drawer-container>
+<!-- side bar navigation -->    
+<mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-sidenav></app-sidenav>
+</mat-drawer>
+<!-- charts and tables display area -->
+<mat-drawer-content>
+    <section fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="visualization-charts">
+        <div id="a" ><app-invoice-bar-chart class="charts"></app-invoice-bar-chart></div>
+       <app-pie-chart class="charts" id="b"></app-pie-chart>
+        <div id="c" class="charts">Finance</div>
+    </section>
+
+<br>
+
+    <mat-divider></mat-divider>
+    <mat-divider></mat-divider>
+
+<br>
+
+<!-- Buttons -->
+   <section class="main_buttons">
+    <button mat-raised-button>Invoice</button>
+    <button mat-raised-button>Clients</button>
+    <button mat-raised-button>Finance</button>
+
+   </section>
+
+<br>
+
+<mat-divider></mat-divider>
+<mat-divider></mat-divider>
+<br>
+
+
+<!-- Tables -->
+    <section class="table-area" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGroup="20px">
+        <div fxFlex="100" id="invoiceTable">
+        <app-invoice-table></app-invoice-table>
+        </div>
+        <!-- <div fxFlex="100"><app-clients-table></app-clients-table></div>
+        <div fxFlex="100"><app-finance-table></app-finance-table></div> -->
+    </section>
+
+    <mat-divider></mat-divider>
+</mat-drawer-content>
+
+</mat-drawer-container>
